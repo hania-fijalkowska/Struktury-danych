@@ -1,0 +1,4 @@
+#ifndef PROJEKT2_QUEUE_H
+#define PROJEKT2_QUEUE_H
+
+#endif //PROJEKT2_QUEUE_H

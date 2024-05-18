@@ -1,0 +1,3 @@
+D:/PRZEDMIOTY/Struktury Danych/Projekt2/cmake-build-debug/CMakeFiles/Projekt2.dir
+D:/PRZEDMIOTY/Struktury Danych/Projekt2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/PRZEDMIOTY/Struktury Danych/Projekt2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
