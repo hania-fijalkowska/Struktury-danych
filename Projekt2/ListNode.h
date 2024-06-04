@@ -9,19 +9,19 @@ public:
 private:
     T assignedData;
     int assignedPriority;
-    std::shared_ptr<ListNode<T>> assignedNextNode;
+    ListNode<T>* assignedNextNode;
 public:
     ListNode(T data, int priority);
-    ListNode();
+    //ListNode();
     ~ListNode();
 
     void setData(T data);
     void setPriority(int priority);
-    void setNextNode(std::shared_ptr<ListNode<T>> nextNode);
+    void setNextNode(ListNode<T>* nextNode);
 
     T getData() const;
     int getPriority() const;
-    std::shared_ptr<ListNode<T>> getNextNode() const;
+    ListNode<T>* getNextNode() const;
 };
 
 #endif //PROJEKT2_LISTNODE_H

@@ -2,14 +2,10 @@
 template class ListNode<int>;
 
 template <typename T>
-ListNode<T>::ListNode(T data, int priority){
-    assignedData = data;
-    assignedPriority = priority;
-    assignedNextNode = nullptr;
-}
+ListNode<T>::ListNode(T data, int priority) : assignedData(data), assignedPriority(priority), assignedNextNode(nullptr) {}
 
-template<typename T>
-ListNode<T>::ListNode() = default;
+//template<typename T>
+//ListNode<T>::ListNode() = default;
 
 template<typename T>
 ListNode<T>::~ListNode() = default;
@@ -25,7 +21,7 @@ void ListNode<T>::setPriority(int priority) {
 }
 
 template<typename T>
-void ListNode<T>::setNextNode(std::shared_ptr<ListNode<T>>nextNode) {
+void ListNode<T>::setNextNode(ListNode<T>* nextNode) {
     assignedNextNode = nextNode;
 }
 
@@ -40,6 +36,6 @@ int ListNode<T>::getPriority() const {
 }
 
 template<typename T>
-std::shared_ptr<ListNode<T>> ListNode<T>::getNextNode() const {
+ListNode<T>* ListNode<T>::getNextNode() const {
     return assignedNextNode;
 }

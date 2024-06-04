@@ -39,13 +39,13 @@ void HeapPriorityQueue<T>::shiftDown(int i) {
     }
 
     if(i != largest){
-         std::swap(assignedQueue.at(largest), assignedQueue.at(i));
-         shiftDown(largest);
+        std::swap(assignedQueue.at(largest), assignedQueue.at(i));
+        shiftDown(largest);
     }
 }
 
 template<typename T>
-void HeapPriorityQueue<T>::shiftUp(int i) { //i is the index of the added Node in the assignedQueue vector
+void HeapPriorityQueue<T>::shiftUp(int i) {
     while(i > 0 && assignedQueue.at(returnParent(i)).getPriority() < assignedQueue.at(i).getPriority()){
         std::swap(assignedQueue.at(returnParent(i)), assignedQueue.at(i));
         i = returnParent(i);
@@ -55,12 +55,12 @@ void HeapPriorityQueue<T>::shiftUp(int i) { //i is the index of the added Node i
 template <typename T>
 void HeapPriorityQueue<T>::enqueue(T data, int priority) {
     HeapNode<T> newNode(data, priority); //creates new Node
-    assignedQueue.push_back(newNode); //adds newNode to the end of assignedQueue vector
+    assignedQueue.push_back(newNode); //adds newNode to the end of the assignedQueue vector
     shiftUp(assignedQueue.size() - 1); //calls shiftUp on the added Node (takes index of the added Node in the assignedQueue vector)
 }
 
 template <typename T>
-HeapNode<T> HeapPriorityQueue<T>::dequeue() {\
+HeapNode<T> HeapPriorityQueue<T>::dequeue() {
     if(assignedQueue.empty()){
         throw std::out_of_range("Queue is empty");
     }
@@ -107,7 +107,7 @@ HeapNode<T> HeapPriorityQueue<T>::peek() const{
     if(assignedQueue.empty()){
         throw std::out_of_range("Queue is empty");
     }
-    return assignedQueue.front();;
+    return assignedQueue.front();
 }
 
 template <typename T>

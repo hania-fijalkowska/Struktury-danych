@@ -1,11 +1,7 @@
-#include <iostream>
-#include "HeapPriorityQueue.h"
-#include "ListPriorityQueue.h"
 #include "Testy.h"
 
 int main() {
+    const int numberOfTests = 100;
 
-    fillQueuesTests<int>(10, 10000);
-
-    return 0;
+    grandTest<int>(numberOfTests, 4);
 }

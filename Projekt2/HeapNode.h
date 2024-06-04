@@ -11,7 +11,7 @@ public:
     HeapNode();
     ~HeapNode();
 
-    void setData(T data);
+    //void setData(T data);
     void setPriority(int priority);
 
     T getData() const;

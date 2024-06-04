@@ -10,10 +10,10 @@ HeapNode<T>::HeapNode() = default;
 template<typename T>
 HeapNode<T>::~HeapNode() = default;
 
-template <typename T>
+/*template <typename T>
 void HeapNode<T>::setData(T data) {
     assignedData = data;
-}
+}*/
 
 template <typename T>
 void HeapNode<T>::setPriority(int priority) {
